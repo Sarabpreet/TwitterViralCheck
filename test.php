@@ -1,4 +1,42 @@
- <?php
+<style>
+    
+
+*{
+  
+  border: 0px;
+  margin:0px;
+  padding:0px;
+}
+body{
+  
+  width:60%;
+  margin:0 auto;
+  text-align: center;
+}
+
+.date {
+  position: relative;
+  top:0px;
+  left:30px;
+  background:Green;
+  width: 250px;
+  padding:20px 10px;
+  color:white;
+  text-align: center;
+}
+
+.text {
+  
+    background:darkgoldenrod;
+  padding:30px;
+  color:wheat;
+  
+}
+
+</style>
+
+
+<?php
     function buildBaseString($baseURI, $method, $params) {
         $r = array();
         ksort($params);
@@ -17,11 +55,11 @@
         return $r;
     }
 
-    $url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
+    $url = "https://api.twitter.com/1.1/search/tweets.json";
 
     $oauth_access_token = "240785139-IeckFIIdokhq71KprJTTPtx2lQX0OrKEUR3Vt8hC";
     $oauth_access_token_secret = "jRzgnsJvkA7Z2QPF1u1NvGUqCy7ONTAmM45VjROLloKcI";
-    $consumer_key = "240785139-IeckFIIdokhq71KprJTTPtx2lQX0OrKEUR3Vt8hC";
+    $consumer_key = "Zy5Ji3EUig67v8uzyrJmxY4iu";
     $consumer_secret = "JhE7YQ0qJhvIOllElsfR6l9fTkUUCPwFMjNW5xceGvZclEotak";
 
     $oauth = array( 'oauth_consumer_key' => $consumer_key,
@@ -52,7 +90,24 @@
 
     $twitter_data = json_decode($json);
 
-//print it out
-// print_r ($twitter_data);
 
+// print_r ($twitter_data);
+// for ($i=0; $i<sizeof($twitter_data) ; $i++) { 
+//             echo "<div class='text'>";
+
+//         print($twitter_data[$i]->text);
+
+//         echo "</div>";
+
+//         echo "<div class='date'>";
+//         $timeOfDay=$twitter_data[$i]->created_at;
+//         // echo "Fulldate: ".$timeOfDay;
+//         $time =substr($timeOfDay, 11, -11);  // returns "abcde"
+//         echo $time;
+//         echo '</div>';
+
+
+// }
+
+    print_r($twitter_data);
 ?>
