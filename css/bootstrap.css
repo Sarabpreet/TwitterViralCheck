@@ -6798,3 +6798,13 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+/*custom styles by sarabpreet */
+
+.box {
+  
+  margin:20px auto;
+  width:600px;
+  background: oldlace;
+  padding:30px;
+
+}
