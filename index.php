@@ -12,13 +12,17 @@
       </div>
 
       <div class="jumbotron row">
-        <h1>Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      
+        <h1>Twitter Viral Check</h1>
+        <p class="lead"> simple php based script to check twitter feed, to check if a #hashtag or a string works!</p>
+
+
+
         <form action="process.php" method="get" class="col-lg-4">
   
 <legend>Enter things you'd like to search </legend><input type="text" name='query'>
 <legend>Limit the posts to : </legend><input type="text" name='limit'><br>
-
+<br>
 <input type="submit" class="btn btn-lg btn-success" role="button" value="Search">
 
 

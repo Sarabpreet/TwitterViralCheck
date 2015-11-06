@@ -3,12 +3,7 @@ require "twitteroauth/autoload.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
 include 'header.php' ?>
 
-<?php if(
-
-
-	isset($_GET['query'])
-
-	 && isset($_GET['limit']) )  {
+<?php if(isset($_GET['query'])&& isset($_GET['limit']) )  {
  
 	$uquery=$_GET['query'];
 	$ulimit=$_GET['limit'];
@@ -28,22 +23,26 @@ function search(array $query)
     
 $query = array(
   "q" => $uquery,
+  "result_type"=>"recent",
 );
   
 $results = search($query);
-  
+  	include 'header.php';
+  	include 'pro.php';
 foreach ($results->statuses as $result) {
 
 	$count++;
 
 	if($count<=$ulimit) {
+	
 
-		  echo "<div class='box'>".$result->user->screen_name . ": " . $result->text ." Posted on".$result->created_at. "</div>";
-
-	}
+		  echo "<div class='box'>"."<span class='username'>".$result->user->screen_name . "</span>: " . $result->text ." <span class='date'>Posted on ".$result->created_at. "</span></div>";
+		// include 'insertDb.php';
+		 
+		}
 }
-
-
+	echo "      </div>";
+ include 'footer.php';
 
 	} 
 // if ends here... 

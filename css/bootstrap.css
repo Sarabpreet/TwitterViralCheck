@@ -6808,3 +6808,22 @@ button.close {
   padding:30px;
 
 }
+
+.date{
+  
+  background:aquamarine;
+  padding:3px;
+}
+
+
+.username {
+  
+  background:azure;
+  padding:5px;
+  
+}
+
+.box {
+  
+  font-size: 20px;
+}
